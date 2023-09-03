@@ -1,5 +1,5 @@
-﻿using gameCenter.Projects.Project1.Models;
-using gameCenter.Projects.Project1.Utilities;
+﻿using gameCenter.Projects.UsersManager.Models;
+using gameCenter.Projects.UsersManager.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +7,15 @@ using System.Windows;
 using System.Windows.Controls;
 using WpfApp1.Models;
 
-namespace gameCenter.Projects.Project1
+namespace gameCenter.Projects.UsersManager
 {
-    public partial class Project1 : Window
+    public partial class UsersManager : Window
     {
         private readonly UsersListHandler _listHandler;
         private readonly List<User> _users;
 
         private int _selectedUserId;
-        public Project1()
+        public UsersManager()
         {
             _listHandler = new();
             _users = _listHandler.UsersList;

@@ -1,4 +1,4 @@
-﻿using gameCenter.Projects.Project1.Models;
+﻿using gameCenter.Projects.UsersManager.Models;
 using System;
 
 namespace WpfApp1.Models

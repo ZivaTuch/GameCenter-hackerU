@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WpfApp1.Models;
 
-namespace gameCenter.Projects.Project1.Models
+namespace gameCenter.Projects.UsersManager.Models
 {
     class UsersListHandler
     {

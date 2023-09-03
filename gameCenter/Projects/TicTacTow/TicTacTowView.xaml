@@ -1,0 +1,42 @@
+﻿<Window x:Class="gameCenter.Projects.TicTacTow.TicTacTowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gameCenter.Projects.TicTacTow"
+        mc:Ignorable="d"
+        Title="TicTacTowView" Height="450" Width="450" Icon="/Images/tictactoe.png">
+
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="DarkBlue"/>
+            <Setter Property="Foreground" Value="Yellow"/>
+            <Setter Property="FontSize" Value="100"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click"/>
+        <Button Grid.Row="0" Grid.Column="1" Click="Button_Click"/>
+        <Button Grid.Row="0" Grid.Column="2" Click="Button_Click"/>
+        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click"/>
+        <Button Grid.Row="1" Grid.Column="1" Click="Button_Click"/>
+        <Button Grid.Row="1" Grid.Column="2" Click="Button_Click"/>
+        <Button Grid.Row="2" Grid.Column="0" Click="Button_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" Click="Button_Click"/>
+        <Button Grid.Row="2" Grid.Column="2" Click="Button_Click"/>
+    </Grid>
+</Window>

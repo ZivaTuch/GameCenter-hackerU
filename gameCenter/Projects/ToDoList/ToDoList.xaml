@@ -1,0 +1,38 @@
+﻿<Window x:Class="gameCenter.Projects.NewFolder.ToDoList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gameCenter.Projects.NewFolder"
+        mc:Ignorable="d"
+        Title="ToDoList" Height="430" Width="400" WindowStartupLocation="CenterScreen" Icon="/Images/todolist.png">
+ 
+    <Grid Background="LightBlue" Margin="1,1,1,1">
+
+        <TextBox Name="txtNewTask" Margin="10,10,50,10" Height="30" VerticalAlignment="Top" FontSize="14" />
+        <Button Content="+" Margin="340,10,10,10" Height="30" VerticalAlignment="Top" Click="OnAddTask"/>
+
+        <ListBox Name="listTasks" Margin="10,50,10,10" Background="DarkBlue" Foreground="Yellow">
+            <!--Check box + TextBlock + TextBox + SaveBtn-->
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox Name="chkTask" IsChecked="{Binding IsComplete}" Click="OnTaskToggled" Width="20"/>
+                        <TextBlock Name="txtTaskDescription" 
+                                   Text="{Binding Description}" 
+                                   FontWeight ="DemiBold"
+                                   FontSize="14"
+                                   MouseLeftButtonDown="OnTextBlockMouseLeftButtonDown" Width="300"/>
+                        <TextBox Name="editTaskDescription" 
+                                 Width="300" 
+                                 FontWeight ="DemiBold"
+                                 FontSize="14"   
+                                 Foreground="Red"
+                                 Visibility="Collapsed"/>
+                        <Button Content="Save" Name="btnSave" Visibility="Collapsed" Click="OnSaveEdit"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+     </Grid>
+</Window>

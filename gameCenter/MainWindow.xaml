@@ -5,60 +5,116 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gameCenter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1400">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
-        </Grid.RowDefinitions>
+        Title="MainWindow" Height="700" Width="1300" WindowStartupLocation="CenterScreen" >
 
-        <Label x:Name="addUserTitle"
+    <Grid>
+        <Border BorderThickness="2" BorderBrush="Black" Background="DarkBlue" CornerRadius="6" Padding="5" Panel.ZIndex="0">
+            <Grid Margin="0,2,0,-2"   Background="DarkBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+
+                <Label x:Name="addUserTitle"
                Grid.Column="0"
                Grid.Row="0"
                Grid.ColumnSpan="3"
                VerticalContentAlignment="Center"
                Content="Game center" 
                HorizontalContentAlignment="Center" 
-               Background="AliceBlue"
+               Background="LightBlue"
                FontWeight="Bold"
                FontSize="60"
         />
+                <Grid>
+                    <Image x:Name="UserTitleImg"
+                Source="/Images/Hadar1.jpg"
+               Grid.Column="0"
+               Grid.Row="0"
+               ToolTip="Ziva Tuch"              
+               Grid.ColumnSpan="1"
+                MouseLeftButtonUp="image_ReturnYoMain"
+                MouseEnter="Image_MouseEnter" 
+                MouseLeave="Image_MouseLeave" Margin="119,14,124,9" RenderTransformOrigin="0.5,0.5"
+       >
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="1.137"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image x:Name="Exit"
+                Source="/Images/exit.png"
+               Grid.Column="0"
+               Grid.Row="0"
+               ToolTip="Exit program"              
+               Grid.ColumnSpan="1"
+               MouseLeftButtonUp="closeButton_Click"
+                MouseEnter="Image_MouseEnter" 
+                MouseLeave="Image_MouseLeave" RenderTransformOrigin="-0.782,0.66" Margin="0,41,266,0" HorizontalAlignment="Right" Width="68" Height="45" VerticalAlignment="Top"
+       />
+                </Grid>
 
-        <Label 
+
+
+                <Label 
             x:Name="GameText"
             Content="please pick a game" 
             Grid.Row="1" 
             Grid.Column="1" 
             VerticalAlignment="Center" 
             HorizontalAlignment="Center"
-            FontSize="26"
+            FontSize="22"
+            FontWeight="SemiBold"
+            Foreground="LightBlue"
+
         />
+                <Label 
+        x:Name="DateLabel"
+        Content="Date" 
+        Grid.Row="0" 
+        Grid.Column="2" 
+        Grid.ColumnSpan="3" 
+        Background="LightBlue"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center" 
+        FontFamily="Arial Black" 
+        FontSize="16"
+    />
 
-        <WrapPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image x:Name="Image1" Source="/Images/square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image1_MouseLeftButtonUp"/>
-            <Image x:Name="Image2" Source="/Images/square2.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave"/>
-            <Image x:Name="Image3" Source="/Images/square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave"/>
-            <Image x:Name="Image4" Source="/Images/square2.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave"/>
-            <Image x:Name="Image5" Source="/Images/square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave"/>
-            <Image x:Name="Image6" Source="/Images/square2.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave"/>
-        </WrapPanel>
+                <WrapPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center"   Background="DarkBlue" VerticalAlignment="Center">
+                    <Image x:Name="Image1" Source="/Images/manegeusers.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image1_MouseLeftButtonUp"/>
+                    <Image x:Name="Image2" Source="/Images/todolist.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave"  MouseLeftButtonUp="Image2_MouseLeftButtonUp" />
+                    <Image x:Name="Image3" Source="/Images/currency.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image3_MouseLeftButtonUp"/>
+                    <Image x:Name="Image4" Source="/Images/tictactoe.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave"  MouseLeftButtonUp="Image4_MouseLeftButtonUp"/>
+                    <Image x:Name="Image5" Source="/Images/calc.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image5_MouseLeftButtonUp"/>
+                    <Image x:Name="Image6" Source="/Images/memory.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave"  MouseLeftButtonUp="Image6_MouseLeftButtonUp"/>
+                </WrapPanel>
 
-        <Label x:Name="Footer"
+                <Label x:Name="Footer"
                Grid.Column="0"
                Grid.Row="3"
+               Content="Enjoy"
                Grid.ColumnSpan="3"
                VerticalContentAlignment="Center"
                HorizontalContentAlignment="Center" 
-               Background="AliceBlue"
+               Background="LightBlue"
                FontWeight="Bold"
                FontSize="23"
         />
+            </Grid>
+        </Border>
     </Grid>
 </Window>

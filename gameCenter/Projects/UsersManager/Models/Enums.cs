@@ -1,4 +1,4 @@
-﻿namespace gameCenter.Projects.Project1.Models
+﻿namespace gameCenter.Projects.UsersManager.Models
 {
     public enum UserStatusTypes
     {

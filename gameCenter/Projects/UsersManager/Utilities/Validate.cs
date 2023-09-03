@@ -8,9 +8,9 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows;
 
-namespace gameCenter.Projects.Project1.Utilities
+namespace gameCenter.Projects.UsersManager.Utilities
 {
-    internal class Validate
+    public class Validate
     {
         public static bool Email(TextBox textBox)
         {
