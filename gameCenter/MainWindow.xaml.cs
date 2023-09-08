@@ -29,13 +29,14 @@ namespace gameCenter
         public MainWindow()
         {
             InitializeComponent();
-
+             
             DispatcherTimer clock = new()
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
             clock.Tick += ShowCurrentDate!;
             clock.Start();
+           
 
         }
 
