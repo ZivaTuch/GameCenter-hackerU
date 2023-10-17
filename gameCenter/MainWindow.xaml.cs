@@ -17,7 +17,8 @@ using System.Numerics;
 using System.Security.AccessControl;
 using System.Security.Policy;
 using System.Windows.Documents;
-using gameCenter.Projects.MemoryGame;
+using gameCenter.Projects.Snake;
+using System.Text.RegularExpressions;
 
 namespace gameCenter
 {
@@ -55,7 +56,7 @@ namespace gameCenter
                 "Image3" => "Currency convertor",
                 "Image4" => "Tic Tac Toe",
                 "Image5" => "Calculator",
-                "Image6" => "Memory Game",
+                "Image6" => "Snake Game",
                 _ => "please pick a game"
             };
         }
@@ -162,17 +163,14 @@ namespace gameCenter
         }
         private void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            MemoryGameView MemoryGameProj = new();
+            SnakeView SnakeProj = new();
             projectPresentationPage presentetion = new();
             Hide();
-            presentetion.OnStart("Memory Game", "" +
-            "A memory game is a classic and entertaining cognitive exercise designed to challenge and improve your memory skills.\n" +
-            " In this game, a set of cards or tiles with images, numbers, or symbols" +
-            " is arranged face down on a playing surface. Players take turns flipping over two cards at a time to reveal their contents.\n" +
-            " The objective is to find matching pairs of cards by remembering their locations.\n" +
-            "To succeed in a memory game, players must concentrate and remember the positions of cards they've previously seen. " +
-            "As more cards are revealed, the challenge increases, requiring players to recall the location of more pairs." +
-            " The game continues until all matching pairs have been discovered, and the player with the most pairs wins.", Image6.Source, MemoryGameProj);
+            presentetion.OnStart("Snake Game", "" +
+            "A snake game is a classic and simple video game where the player controls a snake that moves around a rectangular grid or playing field." +
+            "The objective of the game is to eat food items that appear on the grid," +
+            " which causes the snake to grow longer.As the snake grows, it becomes more challenging to navigate without running into the walls " +
+            "of the playing field or colliding with itself.", Image6.Source,SnakeProj);
             presentetion.ShowDialog();
             Show();
         }

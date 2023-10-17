@@ -132,7 +132,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Projects\MemoryGame\Assets\" />
+    <Folder Include="Projects\UsersManager\Data\" />
   </ItemGroup>
 
 </Project>
