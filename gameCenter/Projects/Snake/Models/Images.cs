@@ -6,6 +6,8 @@ namespace Snake
 {
     public static class Images
     {
+
+   
         public readonly static ImageSource Empty = LoadImage("Empty.png");
         public readonly static ImageSource Body= LoadImage("Body.png");
         public readonly static ImageSource Head = LoadImage("Head.png");
@@ -15,7 +17,9 @@ namespace Snake
 
         private static ImageSource LoadImage(string fileName)
         {
-          return new BitmapImage(new Uri(@"C:\Users\Hadassah\HackerU\FinalProjectOOP\gameCenter\Projects\Snake\Assets\" + fileName));
+            string imagePath = "Assets\\" + fileName;
+
+            return new BitmapImage(new Uri(@imagePath, UriKind.Relative));
         }
-    }
+     }
 }

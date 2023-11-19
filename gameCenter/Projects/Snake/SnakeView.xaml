@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:gameCenter.Projects.Snake"
         mc:Ignorable="d"
         Title="Snake" Height="500" Width="800"
-        MinHeight="400" MinWidth="400"
+        Icon="/Images/snake.png"
+    MinHeight="400" MinWidth="400"
         Background="LightBlue"
         Foreground="DarkBlue"
         WindowStartupLocation="CenterScreen"
@@ -26,11 +27,12 @@
                FontSize="23"
                FontWeight="SemiBold"
                Margin="10" />
+            
 
             <Border x:Name="GridBorder" 
             Grid.Row="1"
             BorderBrush="Gray"
-            BorderThickness="3.50"
+            BorderThickness="4.50"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             RenderOptions.EdgeMode="Aliased"
@@ -46,9 +48,8 @@
             <Border x:Name="Overlay"
                     Grid.Row="1"
                     Background="Blue"
-                    Width="{Binding Path=ActualWidth, ElementName=GridBorder}"
-                    Height="{Binding Path=ActualHeight, ElementName=GridBorder}"
-                    Margin="{Binding Path=Margin, ElementName=GridBorder}"
+                    Width="{Binding ActualWidth, ElementName=GridBorder}"
+                    Margin="20,354,20,20"
                     RenderOptions.EdgeMode="Aliased"
                     >
                 <TextBlock x:Name="OverlayText"
@@ -58,6 +59,6 @@
                            VerticalAlignment="Center"
                            TextWrapping="Wrap" />
             </Border>
-        </Grid>
+           </Grid>
     </Viewbox>
 </Window>

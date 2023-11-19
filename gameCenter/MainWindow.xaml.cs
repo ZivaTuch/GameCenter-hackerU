@@ -7,9 +7,6 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Threading;
 using gameCenter.Projects;
 using gameCenter.Projects.Calculator;
@@ -19,6 +16,9 @@ using System.Security.Policy;
 using System.Windows.Documents;
 using gameCenter.Projects.Snake;
 using System.Text.RegularExpressions;
+using static System.Net.Mime.MediaTypeNames;
+using Image = System.Windows.Controls.Image;
+using Application = System.Windows.Application;
 
 namespace gameCenter
 {
@@ -43,7 +43,9 @@ namespace gameCenter
 
         public void ShowCurrentDate(object sender, EventArgs e)
         {
-            DateLabel.Content = DateTime.UtcNow.ToString("dd/mm/yyyy HH:mm:ss");
+            DateLabel.Content = DateTime.UtcNow.ToString("dd/MM/yy hh:mm");
+          
+
         }
         private void Image_MouseEnter(object sender, MouseEventArgs e)
         {

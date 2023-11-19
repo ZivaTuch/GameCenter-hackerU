@@ -32,7 +32,7 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <TextBlock Name="previousResultTextBlock" Foreground="Silver" FontFamily="Bahnschrift SemiBold" TextAlignment="Right" Text="" FontSize="16"/>
-                            <TextBlock TextWrapping="Wrap" Name="resultTextBlock" Grid.Row="1" Foreground="White" FontFamily="Bahnschrift SemiBold" TextAlignment="Right" Text="0" FontSize="30"/>
+                            <TextBlock TextWrapping="Wrap" Name="resultTextBlock" Grid.Row="1" Foreground="White" FontFamily="Bahnschrift SemiBold" TextAlignment="Right" Text="0" FontSize="26"/>
                         </Grid>
                     </Border>
                 </Grid>
