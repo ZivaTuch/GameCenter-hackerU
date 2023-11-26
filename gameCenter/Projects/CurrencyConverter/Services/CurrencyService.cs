@@ -14,12 +14,14 @@ namespace gameCenter.Projects.CurrencyConverter.Services
     {
    
 
-        private const string BaseApiEndPoint = "http://api.exchangeratesapi.io/latest";
-        private const string ApiKey = "60044b64b18b6b5a023d3addb6c4cd55";
-        private HttpClient Http_Client = new HttpClient();
+       private const string BaseApiEndPoint = "http://api.exchangeratesapi.io/latest";
+       private HttpClient Http_Client = new HttpClient();
 
          public async Task<Dictionary<string, double>> GetExchangeRatesAsync()
         {
+            var config = new ConfigurationBuilder().AddUserSecrets<CurrencyService>().Build();
+            string ApiKey = config["convertorApiKey"];
+
             string requestUrl = $"{BaseApiEndPoint}?access_key={ApiKey}";
             string response = await Http_Client.GetStringAsync(requestUrl);
 

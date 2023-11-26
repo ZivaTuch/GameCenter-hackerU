@@ -45,6 +45,12 @@
     <None Remove="Images\tictactoe.png" />
     <None Remove="Images\todolist.png" />
     <None Remove="Images\users.png" />
+    <None Remove="Projects\Snake\Assets\Body.png" />
+    <None Remove="Projects\Snake\Assets\DeadBody.png" />
+    <None Remove="Projects\Snake\Assets\DeadHead.png" />
+    <None Remove="Projects\Snake\Assets\Empty.png" />
+    <None Remove="Projects\Snake\Assets\Food.png" />
+    <None Remove="Projects\Snake\Assets\Head.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -119,6 +125,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\todolist.png" />
+    <Resource Include="Projects\Snake\Assets\Body.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Projects\Snake\Assets\DeadBody.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Projects\Snake\Assets\DeadHead.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Projects\Snake\Assets\Empty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Projects\Snake\Assets\Food.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Projects\Snake\Assets\Head.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -132,7 +156,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Projects\MemoryGame\Assets\" />
+    <Folder Include="Projects\UsersManager\Data\" />
   </ItemGroup>
 
 </Project>

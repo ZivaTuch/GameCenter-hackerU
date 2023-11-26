@@ -152,7 +152,7 @@
             x:Name="Footer"
             VerticalContentAlignment="Center"
             Grid.Row="1"
-            Content="all rights reserved to me (c)" 
+            Content="Have a Good day..." 
             HorizontalContentAlignment="Center" 
             Background="AliceBlue"
             FontWeight="Bold"
