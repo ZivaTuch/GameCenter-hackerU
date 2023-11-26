@@ -24,3 +24,5 @@ To utilize the "Currency Converter" application:
 - Ensure an active internet connection.
 - Create an API key at [exchangeratesapi.io](https://exchangeratesapi.io).
 - Place the generated key in `secrets.json` (convertorApiKey: "YOUR_API_KEY_HERE").
+
+Enjoy
