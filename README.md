@@ -11,13 +11,13 @@ the applicatins are:
 5. Calculator - a mathemetical tool that helps us to do arithmetic operations
 6. Snake Game - the classic game we all have in our phone
 
-#Technologies Used
+**# Technologies Used**
 .NET
 C#
 WPF
 API
 
-#Note:
+**# Note:**
 To use "Currency Convertor" application you need an internet connection,
 create an API key at exchangeratesapi.io,
 and put the key in secrets.json (convertorApiKey : "")
