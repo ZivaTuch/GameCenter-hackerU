@@ -37,7 +37,7 @@ namespace gameCenter.Projects
         }
         private void ShowCurrentDate(object sender, EventArgs e)
         {
-            DateLabel.Content = DateTime.UtcNow.ToString("dd/MM/yy hh:mm");
+            DateLabel.Content = DateTime.UtcNow.ToString("dd/MM/yy HH:mm");
         }
 
 
